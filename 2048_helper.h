@@ -5,47 +5,51 @@ using namespace std;
 
 void move_left(int board[][5], int numrows = 5)
 {
-	for (int r = 0; r < numrows; r++)
-{
-    int temp[5] = {0};
-    int pos = 0;
-
-    // Move all nonzero tiles to the left
-    for (int c = 0; c < 5; c++)
+    for (int r = 0; r < numrows; r++)
     {
-        if (board[r][c] != 0)
-        {
-            temp[pos] = board[r][c];
-            pos++;
-        }
-    }
+        int temp[5] = {0};
+        int pos = 0;
 
-    // Merge matching tiles only once
-    for (int c = 0; c < 4; c++)
-    {
-        if (temp[c] != 0 && temp[c] == temp[c + 1])
+        // Move nonzero tiles to the left
+        for (int c = 0; c < 5; c++)
         {
-            temp[c] *= 2;
-
-            // Shift remaining tiles left
-            for (int k = c + 1; k < 4; k++)
+            if (board[r][c] != 0)
             {
-                temp[k] = temp[k + 1];
+                temp[pos] = board[r][c];
+                pos++;
             }
+        }
 
-            temp[4] = 0;
+        // Merge matching tiles once
+        for (int c = 0; c < 4; c++)
+        {
+            if (temp[c] != 0 && temp[c] == temp[c + 1])
+            {
+                temp[c] *= 2;
+                temp[c + 1] = 0;
+                c++;
+            }
+        }
 
-            // Skip the tile created by this merge
-            c++;
+        // Move remaining tiles left after merging
+        int result[5] = {0};
+        pos = 0;
+
+        for (int c = 0; c < 5; c++)
+        {
+            if (temp[c] != 0)
+            {
+                result[pos] = temp[c];
+                pos++;
+            }
+        }
+
+        // Copy finished row back to board
+        for (int c = 0; c < 5; c++)
+        {
+            board[r][c] = result[c];
         }
     }
-
-    // Copy the completed row back to the board
-    for (int c = 0; c < 5; c++)
-    {
-        board[r][c] = temp[c];
-    }
-}
 }
 
 void move_right(int board[][5], int numrows = 5)
