@@ -6,9 +6,9 @@ The Luhn checksum algorithm is an algorithm that determines whether a 16-digit n
 
 ### Collaborators:
 
-- PibosGit
-- tyler-eric-west
 - Peregrine05
+- tyler-eric-west
+- PibosGit
 
 ### Task Plan
 
