@@ -549,7 +549,13 @@ bool load_game(int board[][5], int numrows) {
     int temp_board[numrows][5];
     for (int i = 0; i < numrows; i++) {
         for (int j = 0; j < 5; j++) {
+            temp_board[i][j] = -1;
             ifs >> temp_board[i][j];
+            if (temp_board[i][j] == -1) {
+                cout << "Missing data at row: " << i << " and column " << j << endl;
+                ifs.close();
+                return false;
+            }
             if (temp_board[i][j] < 0 || !is_valid_tile(temp_board[i][j])) {
                 cout << "Invalid tile value at row: " << i << " and column " << j << ": Expected"
                 << " zero or a positive power of 2 greater than 1, got " << temp_board[i][j]
