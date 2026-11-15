@@ -1,8 +1,28 @@
 # cs211-group-13-project
 
-2048 is a game where the player must choose directions to move tiles, with the goal of creating a tile of value 2048. This implementation of the game uses a 5x5 grid, and players can save their progress to a file to load at a later time.
+2048 is a game where the player must choose directions to move tiles, with the goal of creating a tile of value 2048. This implementation of the game uses a 5x5 grid, and players can save their progress to a "savegame.txt" file in the current working directory to be loaded at a later time. This implementation of 2048 only supports one save file in the working directory. Attempting to save when a save already exists will result in previous save data being overwritten.
 
 The Luhn checksum algorithm is an algorithm that determines whether a 16-digit number, such as those used on credit cards, can represent a valid credit card number.
+
+### Building
+
+To build and run the programs, ensure you have a C++ compiler installed.
+
+On Linux, run the following commands to run 2048:
+
+```shell
+g++ game2048/main.cpp game2048/2048_helper.cpp -o game2048_app
+./game2048_app
+```
+
+To run the Luhn checksum program, run the following commands:
+
+```shell
+g++ luhn/luhn.cpp -o luhn_app
+./luhn_app
+```
+
+On Windows, if you are using Visual Studio Code with the correct C++ extensions installed, then you can just click the play button to compile and run the program. If you do not have a way to compile C++ code on your computer, then you may upload the files to [OnlineGDB](https://www.onlinegdb.com), and run them there.
 
 ### Collaborators:
 
@@ -15,19 +35,19 @@ The Luhn checksum algorithm is an algorithm that determines whether a 16-digit n
 **Peregrine05**:
 - Checkpoint 1: Create GitHub repository, invite members, set up folders, upload starter files, create README and project plan, open first PR.
 - Checkpoint 4: Implement 2048 save/load system, file validation, state preservation after failed loads, and save/load testing.
-- Reviews: Member C's PRs
-- Merges: Member C's approved PRs
+- Reviews: Member tyler-eric-west's PRs
+- Merges: Member PibosGit's approved PRs
 
 **tyler-eric-west**:
 - Checkpoint 2: Implement move_left, merge logic, merge-once rule, and required movement tests.
 - Checkpoint 5: Implement the Luhn program, input validation, checksum calculation, repeatable interaction, and required Luhn tests.
-- Reviews: Member A's PRs
-- Merges: Member A's approved PRs
+- Reviews: Member PibosGit's PRs
+- Merges: Member Peregrine05's approved PRs
 
 **PibosGit**
 - Checkpoint 3: Implement move_right, move_up, move_down, scoring, tile insertion, menu
 controls, win/game-over logic.
 - Checkpoint 6: Complete README, report.pdf, tests.md, contributions.md, final packaging, and
 clean-build verification.
-- Reviews: Member B's PRs
-- Merges: Member B's approved PRs
+- Reviews: Member Peregrine05's PRs
+- Merges: Member tyler-eric-west's approved PRs
