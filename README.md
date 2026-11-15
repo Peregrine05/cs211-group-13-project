@@ -26,6 +26,11 @@ To play the game, follow the on-screen prompts.
 
 The Luhn checksum algorithm is an algorithm that determines whether a 16-digit number, such as those used on credit cards, can represent a valid credit card number.
 
+To use the program, follow the on-screen prompts.
+
+- `1`: Input a number to check if it can represent a valid credit card number
+- `2`: Exit the program
+
 ---
 
 ## Building
