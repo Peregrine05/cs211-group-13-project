@@ -66,19 +66,19 @@ On Windows, if you are using Visual Studio Code with the correct C++ extensions 
 **Peregrine05**:
 - Checkpoint 1: Create GitHub repository, invite members, set up folders, upload starter files, create README and project plan, open first PR.
 - Checkpoint 4: Implement 2048 save/load system, file validation, state preservation after failed loads, and save/load testing.
-- Reviews: Member tyler-eric-west's PRs
-- Merges: Member PibosGit's approved PRs
+- Reviews: tyler-eric-west's PRs
+- Merges: PibosGit's approved PRs
 
 **tyler-eric-west**:
 - Checkpoint 2: Implement move_left, merge logic, merge-once rule, and required movement tests.
 - Checkpoint 5: Implement the Luhn program, input validation, checksum calculation, repeatable interaction, and required Luhn tests.
-- Reviews: Member PibosGit's PRs
-- Merges: Member Peregrine05's approved PRs
+- Reviews: PibosGit's PRs
+- Merges: Peregrine05's approved PRs
 
 **PibosGit**
 - Checkpoint 3: Implement move_right, move_up, move_down, scoring, tile insertion, menu
 controls, win/game-over logic.
 - Checkpoint 6: Complete README, report.pdf, tests.md, contributions.md, final packaging, and
 clean-build verification.
-- Reviews: Member Peregrine05's PRs
-- Merges: Member tyler-eric-west's approved PRs
+- Reviews: Peregrine05's PRs
+- Merges: tyler-eric-west's approved PRs
