@@ -1,10 +1,34 @@
 # cs211-group-13-project
 
+Session: MW
+Group: 13
+Repo URL: [https://github.com/Peregrine05/cs211-group-13-project](https://github.com/Peregrine05/cs211-group-13-project)
+
+---
+
+### 2048
+
 2048 is a game where the player must choose directions to move tiles, with the goal of creating a tile of value 2048. This implementation of the game uses a 5x5 grid, and players can save their progress to a "savegame.txt" file in the current working directory to be loaded at a later time. This implementation of 2048 only supports one save file in the working directory. Attempting to save when a save already exists will result in previous save data being overwritten.
+
+To play the game, follow the on-screen prompts.
+
+- `u`: Merge tiles up
+- `d`: Merge tiles down
+- `l`: Merge tiles left
+- `r`: Merge tiles right
+- `n`: Start a new game
+- `s`: Save your current game to "savegame.txt" in the current working directory
+- `o`: Load the saved game from "savegame.txt" in the current working directory
+- `h`: Get in-game help
+- `e`: Exit without saving
+
+### Luhn Algorithm
 
 The Luhn checksum algorithm is an algorithm that determines whether a 16-digit number, such as those used on credit cards, can represent a valid credit card number.
 
-### Building
+---
+
+## Building
 
 To build and run the programs, ensure you have a C++ compiler installed.
 
@@ -24,13 +48,13 @@ g++ luhn/luhn.cpp -o luhn_app
 
 On Windows, if you are using Visual Studio Code with the correct C++ extensions installed, then you can just click the play button to compile and run the program. If you do not have a way to compile C++ code on your computer, then you may upload the files to [OnlineGDB](https://www.onlinegdb.com), and run them there.
 
-### Collaborators:
+## Collaborators:
 
 - Peregrine05
 - tyler-eric-west
 - PibosGit
 
-### Task Plan
+## Task Plan
 
 **Peregrine05**:
 - Checkpoint 1: Create GitHub repository, invite members, set up folders, upload starter files, create README and project plan, open first PR.
