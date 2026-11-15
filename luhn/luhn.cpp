@@ -2,32 +2,28 @@
 #include <string>
 using namespace std;
 
-int main()
+// Check that the input contains exactly 16 digits
+bool validInput(string number)
 {
-    string number;
-
-    cout << "Luhn Checksum Validator" << endl;
-    cout << "Enter a 16-digit number: ";
-    cin >> number;
-
-    // Check that the number has exactly 16 digits
     if (number.length() != 16)
     {
-        cout << "Invalid input: Number must contain exactly 16 digits." << endl;
-        return 0;
+        return false;
     }
 
-    // Check that every character is a digit
     for (int i = 0; i < 16; i++)
     {
         if (number[i] < '0' || number[i] > '9')
         {
-            cout << "Invalid input: Only digits are allowed." << endl;
-            return 0;
+            return false;
         }
     }
 
-    // Calculate the Luhn checksum
+    return true;
+}
+
+// Calculate the Luhn checksum
+bool checkLuhn(string number)
+{
     int sum = 0;
     bool doubleDigit = false;
 
@@ -49,14 +45,66 @@ int main()
         doubleDigit = !doubleDigit;
     }
 
-    // Check whether the checksum is divisible by 10
-    if (sum % 10 == 0)
+    return sum % 10 == 0;
+}
+
+int main()
+{
+    string number;
+    int choice;
+
+    cout << "Luhn Checksum Validator" << endl;
+
+    while (true)
     {
-        cout << "Valid Luhn checksum!" << endl;
-    }
-    else
-    {
-        cout << "Invalid Luhn checksum!" << endl;
+        cout << "\n1. Check a 16-digit number" << endl;
+        cout << "2. Exit" << endl;
+        cout << "Enter your choice: ";
+
+        if (!(cin >> choice))
+        {
+            if (cin.eof())
+            {
+                break;
+            }
+
+            cout << "Invalid choice. Please enter 1 or 2." << endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+            continue;
+        }
+
+        if (choice == 2)
+        {
+            cout << "Goodbye!" << endl;
+            break;
+        }
+        else if (choice == 1)
+        {
+            cout << "Enter a 16-digit number: ";
+
+            if (!(cin >> number))
+            {
+                break;
+            }
+
+            if (!validInput(number))
+            {
+                cout << "Invalid input: Enter exactly 16 digits." << endl;
+            }
+            else if (checkLuhn(number))
+            {
+                cout << "Valid Luhn checksum!" << endl;
+            }
+            else
+            {
+                cout << "Invalid Luhn checksum!" << endl;
+            }
+        }
+        else
+        {
+            cout << "Invalid choice. Please enter 1 or 2." << endl;
+        }
     }
 
     return 0;
