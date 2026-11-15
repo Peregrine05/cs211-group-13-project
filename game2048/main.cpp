@@ -1,44 +1,101 @@
 #include <iostream>
+#include <ctime>
 #include "2048_helper.h"
+
 using namespace std;
 
 int main()
 {
-	int size = 5;
-	int board[5][5] = {
-		{0, 4, 2, 4, 0},
-		{0, 0, 0, 0, 0},
-		{2, 0, 2, 0, 2},
-		{0, 0, 2, 0, 0},
-		{2, 2, 2, 2, 2},
-	};
-	//while getch == x loop for up down left right
+    srand(time(0));
 
-	cout << "Initial Board : [5x5] :" << endl;
-	print_board(board);
+    int size = 5;
 
-	char choice = 'u';	//initialized
-	while (choice != 'e')
-	{
+    int board[5][5] =
+    {
+        {0,0,0,0,0},
+        {0,0,0,0,0},
+        {0,0,0,0,0},
+        {0,0,0,0,0},
+        {0,0,0,0,0}
+    };
 
-		cout << "Please enter choice:{u,d,l,r,e} for UP, DOWN, LEFT, RIGHT, Exit: " << endl;
-		cout << "Choice: ";
-		cin >> choice;
+    // Start with two tiles
+    insert_random(board, size);
+    insert_random(board, size);
 
-		if (choice == 'u')
-			move_up(board, size);
-		else if (choice == 'd')
-			move_down(board, size);
-		else if (choice == 'l')
-			move_left(board, size);
-		else if (choice == 'r')
-			move_right(board, size);
+    cout << "===== 2048 (5x5) =====" << endl;
 
-		insert_random(board, size);
-		print_board(board);
+    while (true)
+    {
+        print_board(board);
 
-	}
+        cout << "Score: " << get_score() << endl;
 
+        // Win check
+        if (check_win(board))
+        {
+            cout << "\nCongratulations! You reached 2048!" << endl;
+            break;
+        }
 
-	return 0;
+        // Game over check
+        if (game_over(board))
+        {
+            cout << "\nGAME OVER!" << endl;
+            cout << "Final Score: " << get_score() << endl;
+            break;
+        }
+
+        char choice;
+
+        cout << "\nEnter move:" << endl;
+        cout << "u = Up" << endl;
+        cout << "d = Down" << endl;
+        cout << "l = Left" << endl;
+        cout << "r = Right" << endl;
+        cout << "e = Exit" << endl;
+        cout << "Choice: ";
+
+        cin >> choice;
+
+        if (choice == 'e')
+        {
+            cout << "Thanks for playing!" << endl;
+            break;
+        }
+
+        int oldBoard[5][5];
+        copy_board(board, oldBoard);
+
+        switch(choice)
+        {
+            case 'u':
+                move_up(board, size);
+                break;
+
+            case 'd':
+                move_down(board, size);
+                break;
+
+            case 'l':
+                move_left(board, size);
+                break;
+
+            case 'r':
+                move_right(board, size);
+                break;
+
+            default:
+                cout << "Invalid choice!" << endl;
+                continue;
+        }
+
+        // Only add a tile if board changed
+        if (board_changed(oldBoard, board))
+        {
+            insert_random(board, size);
+        }
+    }
+
+    return 0;
 }
