@@ -1,7 +1,9 @@
 # cs211-group-13-project
 
 Session: MW
+
 Group: 13
+
 Repo URL: [https://github.com/Peregrine05/cs211-group-13-project](https://github.com/Peregrine05/cs211-group-13-project)
 
 ---
