@@ -15,6 +15,7 @@ int main()
     reset_game(board);
 
     bool won_game = false;
+    bool lost_game = false;
 
     cout << "===== 2048 (5x5) =====" << endl;
 
@@ -34,20 +35,22 @@ int main()
         }
 
         // Game over check
-        if (game_over(board))
+        if (!lost_game && game_over(board))
         {
             cout << "\nGAME OVER!" << endl;
             cout << "Final Score: " << get_score() << endl;
-            break;
+            lost_game = true;
         }
 
         char choice;
 
         cout << "\nEnter move:" << endl;
-        cout << "u = Up" << endl;
-        cout << "d = Down" << endl;
-        cout << "l = Left" << endl;
-        cout << "r = Right" << endl;
+        if (!lost_game) {
+            cout << "u = Up" << endl;
+            cout << "d = Down" << endl;
+            cout << "l = Left" << endl;
+            cout << "r = Right" << endl;
+        }
         cout << "n = New Game" << endl;
         cout << "s = Save" << endl;
         cout << "o = Load" << endl;
@@ -73,6 +76,8 @@ int main()
         } else if (choice == 'n') {
             if (confirm_reset_game()) {
                 reset_game(board);
+                won_game = false;
+                lost_game = false;
             }
             continue;
         } else if (choice == 's') {
@@ -87,9 +92,13 @@ int main()
                 cout << "Game state loaded from \"savegame.txt\"." << endl;
             } else {
                 cout << "Failed to load game state from \"savegame.txt\". Make sure the file"
-                << " exists in the working directory, and that it represents a valid game save"
+                << " exists in the working directory, and that it represents a valid game save."
                 << endl;
             }
+            continue;
+        }
+
+        if (lost_game) {
             continue;
         }
 
