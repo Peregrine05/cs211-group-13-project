@@ -25,3 +25,19 @@
 6. 453201511283036X  Reject: non-digit                                      TRUE
 7. Input containing an internal space Reject: malformed input               TRUE
 8. Several checks followed by exit Results correct; loop exits cleanly      TRUE
+
+
+### Additional OnlineGDB Testing Evidence
+
+Testing environment: OnlineGDB (C++ compiler)
+
+| Program | Starting State / Input | Expected Result | Actual Result | Pass/Fail |
+|---|---|---|---|---|
+| 2048 | Compile and run main.cpp with 2048_helper.cpp and 2048_helper.h | Game launches and displays a 5x5 board | Game launched and displayed the board | PASS |
+| 2048 | Enter movement commands during gameplay | Tiles move and matching tiles merge; score and move counters update | Movement, merging, and counter updates observed | PASS |
+| 2048 | Enter s during gameplay | Game state saved to savegame.txt | Program confirmed game state saved | PASS |
+| 2048 | Enter h | Help instructions displayed | Help instructions displayed | PASS |
+| 2048 | Enter e | Program exits normally | Program exited with code 0 | PASS |
+| Luhn | Compile and run the Luhn program | Program displays menu and accepts input | Program ran and accepted input | PASS |
+
+Note: These entries record the observed OnlineGDB session. Additional detailed edge-case tests are listed in the sections above.
