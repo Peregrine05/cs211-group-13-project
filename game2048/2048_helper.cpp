@@ -130,8 +130,8 @@ void move_up(int board[][5], int numrows)
             if (temp[r] != 0 && temp[r] == temp[r + 1])
             {
                 temp[r] *= 2;
-                if (temp[c] > largest_tile) {
-                    largest_tile = temp[c];
+                if (temp[r] > largest_tile) {
+                    largest_tile = temp[r];
                 }
                 score += temp[r];
                 temp[r + 1] = 0;
@@ -176,8 +176,8 @@ void move_down(int board[][5], int numrows)
             if (temp[r] != 0 && temp[r] == temp[r - 1])
             {
                 temp[r] *= 2;
-                if (temp[c] > largest_tile) {
-                    largest_tile = temp[c];
+                if (temp[r] > largest_tile) {
+                    largest_tile = temp[r];
                 }
                 score += temp[r];
                 temp[r - 1] = 0;
@@ -527,24 +527,32 @@ bool load_game(int board[][5], int numrows) {
         }
     }
 
-    int temp_score;
+    int temp_score = -1;
     ifs >> temp_score;
+    if (temp_score == -1) {
+        cout << "Missing data for score" << endl;
+        ifs.close();
+        return false;
+    }
     if (temp_score < 0) {
         cout << "Invalid saved score value: Expected a positive value, got " << temp_score << endl;
         ifs.close();
         return false;
     }
-    score = temp_score;
 
-    int temp_num_moves;
+    int temp_num_moves = -1;
     ifs >> temp_num_moves;
+    if (temp_num_moves == -1) {
+        cout << "Missing data for number of moves" << endl;
+        ifs.close();
+        return false;
+    }
     if (temp_num_moves < 0) {
         cout << "Invalid saved number of moves: Expected a positive value, got " << temp_num_moves
         << endl;
         ifs.close();
         return false;
     }
-    num_moves = temp_num_moves;
 
     int temp_board[numrows][5];
     for (int i = 0; i < numrows; i++) {
@@ -565,6 +573,8 @@ bool load_game(int board[][5], int numrows) {
             }
         }
     }
+    score = temp_score;
+    num_moves = temp_num_moves;
     copy_board(temp_board, board);
     find_largest_tile(board);
 
