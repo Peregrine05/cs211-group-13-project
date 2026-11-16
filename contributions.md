@@ -11,8 +11,8 @@
 	- Added File Validation
 	- Tested save/load function
 
-- Created PRs: [#4](https://github.com/Peregrine05/cs211-group-13-project/pull/4), [#5](https://github.com/Peregrine05/cs211-group-13-project/pull/5), [#6](https://github.com/Peregrine05/cs211-group-13-project/pull/6), [#7](https://github.com/Peregrine05/cs211-group-13-project/pull/7), [#8](https://github.com/Peregrine05/cs211-group-13-project/pull/8), [#9](https://github.com/Peregrine05/cs211-group-13-project/pull/9).
-- Reviewed and verified functionality of PRs: [#1](https://github.com/Peregrine05/cs211-group-13-project/pull/1) and [#2](https://github.com/Peregrine05/cs211-group-13-project/pull/2).
+- Created PRs: [#4](https://github.com/Peregrine05/cs211-group-13-project/pull/4), [#5](https://github.com/Peregrine05/cs211-group-13-project/pull/5), [#6](https://github.com/Peregrine05/cs211-group-13-project/pull/6), [#7](https://github.com/Peregrine05/cs211-group-13-project/pull/7), [#8](https://github.com/Peregrine05/cs211-group-13-project/pull/8), [#9](https://github.com/Peregrine05/cs211-group-13-project/pull/9), [#11](https://github.com/Peregrine05/cs211-group-13-project/pull/11).
+- Reviewed and verified functionality of PRs: [#1](https://github.com/Peregrine05/cs211-group-13-project/pull/1), [#2](https://github.com/Peregrine05/cs211-group-13-project/pull/2), and [#10](https://github.com/Peregrine05/cs211-group-13-project/pull/10).
 - Merged PRs: [#3](https://github.com/Peregrine05/cs211-group-13-project/pull/3).
 
 ### tyler-eric-west
@@ -26,9 +26,9 @@
 	- Added Input validation
 	- added checksum validation
 
-- Created PRs: [#1](https://github.com/Peregrine05/cs211-group-13-project/pull/1) and [#2](https://github.com/Peregrine05/cs211-group-13-project/pull/2).
+- Created PRs: [#1](https://github.com/Peregrine05/cs211-group-13-project/pull/1), [#2](https://github.com/Peregrine05/cs211-group-13-project/pull/2), and [#10](https://github.com/Peregrine05/cs211-group-13-project/pull/10).
 - Reviewed PRs: [#3](https://github.com/Peregrine05/cs211-group-13-project/pull/3).
-- Merged PRs: [#4](https://github.com/Peregrine05/cs211-group-13-project/pull/4), [#5](https://github.com/Peregrine05/cs211-group-13-project/pull/5), [#6](https://github.com/Peregrine05/cs211-group-13-project/pull/6), [#7](https://github.com/Peregrine05/cs211-group-13-project/pull/7), [#8](https://github.com/Peregrine05/cs211-group-13-project/pull/8), [#9](https://github.com/Peregrine05/cs211-group-13-project/pull/9).
+- Merged PRs: [#4](https://github.com/Peregrine05/cs211-group-13-project/pull/4), [#5](https://github.com/Peregrine05/cs211-group-13-project/pull/5), [#6](https://github.com/Peregrine05/cs211-group-13-project/pull/6), [#7](https://github.com/Peregrine05/cs211-group-13-project/pull/7), [#8](https://github.com/Peregrine05/cs211-group-13-project/pull/8), [#9](https://github.com/Peregrine05/cs211-group-13-project/pull/9), [#11](https://github.com/Peregrine05/cs211-group-13-project/pull/11).
 
 ### PibosGit
 
@@ -48,5 +48,5 @@
 	- Validated final code
 
 - Created PRs: [#3](https://github.com/Peregrine05/cs211-group-13-project/pull/3).
-- Reviewed PRs: [#4](https://github.com/Peregrine05/cs211-group-13-project/pull/4), [#5](https://github.com/Peregrine05/cs211-group-13-project/pull/5), [#6](https://github.com/Peregrine05/cs211-group-13-project/pull/6), [#7](https://github.com/Peregrine05/cs211-group-13-project/pull/7), [#8](https://github.com/Peregrine05/cs211-group-13-project/pull/8), [#9](https://github.com/Peregrine05/cs211-group-13-project/pull/9).
-- Merged PRs: [#1](https://github.com/Peregrine05/cs211-group-13-project/pull/1) and [#2](https://github.com/Peregrine05/cs211-group-13-project/pull/2).
+- Reviewed PRs: [#4](https://github.com/Peregrine05/cs211-group-13-project/pull/4), [#5](https://github.com/Peregrine05/cs211-group-13-project/pull/5), [#6](https://github.com/Peregrine05/cs211-group-13-project/pull/6), [#7](https://github.com/Peregrine05/cs211-group-13-project/pull/7), [#8](https://github.com/Peregrine05/cs211-group-13-project/pull/8), [#9](https://github.com/Peregrine05/cs211-group-13-project/pull/9), [#11](https://github.com/Peregrine05/cs211-group-13-project/pull/11).
+- Merged PRs: [#1](https://github.com/Peregrine05/cs211-group-13-project/pull/1), [#2](https://github.com/Peregrine05/cs211-group-13-project/pull/2), and [#10](https://github.com/Peregrine05/cs211-group-13-project/pull/10).
